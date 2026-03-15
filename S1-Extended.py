@@ -10,8 +10,13 @@ S1-Extended: 위상결합 파라미터 민감도 분석
 """
 
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+
+plt.rcParams['font.sans-serif'] = ['WenQuanYi Zen Hei', 'DejaVu Sans']
+plt.rcParams['axes.unicode_minus'] = False
 from itertools import product
 
 # ─────────────────────────────────────────
@@ -245,8 +250,4 @@ plt.tight_layout()
 plt.savefig('s1_theory_vs_experiment.png', dpi=150, bbox_inches='tight')
 print("저장: s1_theory_vs_experiment.png")
 
-plt.show()
 print("\n─── S1 민감도 분석 완료 ───")
-
-
-위 코드를 실행해봐.
